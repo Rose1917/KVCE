@@ -1,0 +1,194 @@
+echo "@make -f ./scripts/Makefile.build obj=scripts/kconfig menuconfig"
+@make -f ./scripts/Makefile.build obj=scripts/kconfig menuconfig
+GNU Make 4.2.1
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Reading makefiles...
+Updating makefiles....
+Updating goal targets....
+ File 'menuconfig' does not exist.
+     File 'FORCE' does not exist.
+    Must remake target 'FORCE'.
+    Successfully remade target file 'FORCE'.
+       Prerequisite 'FORCE' of target 'scripts/kconfig/mconf-cfg' does not exist.
+      Must remake target 'scripts/kconfig/mconf-cfg'.
+      Successfully remade target file 'scripts/kconfig/mconf-cfg'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/mconf.o' does not exist.
+    Must remake target 'scripts/kconfig/mconf.o'.
+    Successfully remade target file 'scripts/kconfig/mconf.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/lxdialog/checklist.o' does not exist.
+    Must remake target 'scripts/kconfig/lxdialog/checklist.o'.
+    Successfully remade target file 'scripts/kconfig/lxdialog/checklist.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/lxdialog/inputbox.o' does not exist.
+    Must remake target 'scripts/kconfig/lxdialog/inputbox.o'.
+    Successfully remade target file 'scripts/kconfig/lxdialog/inputbox.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/lxdialog/menubox.o' does not exist.
+    Must remake target 'scripts/kconfig/lxdialog/menubox.o'.
+    Successfully remade target file 'scripts/kconfig/lxdialog/menubox.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/lxdialog/textbox.o' does not exist.
+    Must remake target 'scripts/kconfig/lxdialog/textbox.o'.
+    Successfully remade target file 'scripts/kconfig/lxdialog/textbox.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/lxdialog/util.o' does not exist.
+    Must remake target 'scripts/kconfig/lxdialog/util.o'.
+    Successfully remade target file 'scripts/kconfig/lxdialog/util.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/lxdialog/yesno.o' does not exist.
+    Must remake target 'scripts/kconfig/lxdialog/yesno.o'.
+    Successfully remade target file 'scripts/kconfig/lxdialog/yesno.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/confdata.o' does not exist.
+    Must remake target 'scripts/kconfig/confdata.o'.
+    Successfully remade target file 'scripts/kconfig/confdata.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/expr.o' does not exist.
+    Must remake target 'scripts/kconfig/expr.o'.
+    Successfully remade target file 'scripts/kconfig/expr.o'.
+       Prerequisite 'FORCE' of target 'scripts/kconfig/lexer.lex.c' does not exist.
+      Must remake target 'scripts/kconfig/lexer.lex.c'.
+      Successfully remade target file 'scripts/kconfig/lexer.lex.c'.
+       Prerequisite 'FORCE' of target 'scripts/kconfig/parser.tab.h' does not exist.
+      Must remake target 'scripts/kconfig/parser.tab.h'.
+      Successfully remade target file 'scripts/kconfig/parser.tab.h'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/lexer.lex.o' does not exist.
+    Must remake target 'scripts/kconfig/lexer.lex.o'.
+    Successfully remade target file 'scripts/kconfig/lexer.lex.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/menu.o' does not exist.
+    Must remake target 'scripts/kconfig/menu.o'.
+    Successfully remade target file 'scripts/kconfig/menu.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/parser.tab.o' does not exist.
+    Must remake target 'scripts/kconfig/parser.tab.o'.
+    Successfully remade target file 'scripts/kconfig/parser.tab.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/preprocess.o' does not exist.
+    Must remake target 'scripts/kconfig/preprocess.o'.
+    Successfully remade target file 'scripts/kconfig/preprocess.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/symbol.o' does not exist.
+    Must remake target 'scripts/kconfig/symbol.o'.
+    Successfully remade target file 'scripts/kconfig/symbol.o'.
+     Prerequisite 'FORCE' of target 'scripts/kconfig/util.o' does not exist.
+    Must remake target 'scripts/kconfig/util.o'.
+    Successfully remade target file 'scripts/kconfig/util.o'.
+   Prerequisite 'FORCE' of target 'scripts/kconfig/mconf' does not exist.
+  Must remake target 'scripts/kconfig/mconf'.
+  Successfully remade target file 'scripts/kconfig/mconf'.
+Must remake target 'menuconfig'.
+[?1049h[22;0;0t[1;51r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[39;49m[37m[40m[H[2J[51d(B[0;1m[36m[44m[J[H .config - Linux/x86 5.15.9 Kernel Configuration[K
+ (0[0;1m[36m[44mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq(B[0;1m[36m[44m[K
+[K
+[229G[1K [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+[5G[1K (B[0m[30m[47m[75X[9;81H(B[0;1m[37m[44m    [33m[44mG[37m[44meneral setup  --->(B[0m[30m[47m[123X[227G(B[0;1m[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[5G[1K [37m[47m[221X[227G[36m[44m   [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+[1K [30m[40m  [36m[44m[K
+    [30m[40m[227X[232G[36m[44m[K[9;82H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[10;81H[30m[47m[*] 64-(B[0;1m[34m[47mb(B[0m[30m[47mit kernel[30m[47m[129X[10;89H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[11;81H[30m[47m    (B[0;1m[34m[47mP(B[0m[30m[47mrocessor type and features  --->[30m[47m[109X[11;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[12;81H[30m[47m    (B[0;1m[34m[47mP(B[0m[30m[47mower management and ACPI options  --->[30m[47m[103X[12;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[13;81H[30m[47m    (B[0;1m[34m[47mB(B[0m[30m[47mus options (PCI etc.)  --->[30m[47m[114X[13;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[14;81H[30m[47m    (B[0;1m[34m[47mB(B[0m[30m[47minary Emulations  --->[30m[47m[119X[14;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[15;81H[30m[47m[*] (B[0;1m[34m[47mV(B[0m[30m[47mirtualization  --->[30m[47m[122X[15;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[16;81H[30m[47m    (B[0;1m[34m[47mG(B[0m[30m[47meneral architecture-dependent options  --->[30m[47m[98X[16;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[17;81H[30m[47m[*] (B[0;1m[34m[47mE(B[0m[30m[47mnable loadable module support  --->[30m[47m[106X[17;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[18;81H[30m[47m[*] (B[0;1m[34m[47mE(B[0m[30m[47mnable the block layer  --->[30m[47m[114X[18;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[19;81H[30m[47m    (B[0;1m[34m[47mI(B[0m[30m[47mO Schedulers  --->[30m[47m[123X[19;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[20;81H[30m[47m    (B[0;1m[34m[47mE(B[0m[30m[47mxecutable file formats  --->[30m[47m[113X[20;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[21;81H[30m[47m    M(B[0;1m[34m[47me(B[0m[30m[47mmory Management options  --->[30m[47m[111X[21;87H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[22;81H[30m[47m[*] N(B[0;1m[34m[47me(B[0m[30m[47mtworking support  --->[30m[47m[118X[22;87H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[23;81H[30m[47m    (B[0;1m[34m[47mD(B[0m[30m[47mevice Drivers  --->[30m[47m[122X[23;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[24;81H[30m[47m    (B[0;1m[34m[47mF(B[0m[30m[47mile systems  --->[30m[47m[124X[24;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[25;81H[30m[47m    (B[0;1m[34m[47mS(B[0m[30m[47mecurity options  --->[30m[47m[120X[25;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[26;81H[30m[47m-*- (B[0;1m[34m[47mC(B[0m[30m[47mryptographic API  --->[30m[47m[119X[26;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[27;81H[30m[47m    (B[0;1m[34m[47mL(B[0m[30m[47mibrary routines  --->[30m[47m[120X[27;86H(B[m[39;49m[37m[40m
+[6G[30m[47m[75X[28;81H[30m[47m    (B[0;1m[34m[47mK(B[0m[30m[47mernel hacking  --->[30m[47m[122X[28;86H(B[m[39;49m[37m[40m[3;3H(0[0;1m[37m[47mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq(B[0;1m[34m[47m Linux/x86 5.15.9 Kernel Configuration (0[0;1m[37m[47mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq(0[0m[30m[47mk(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m  Arrow keys navigate the menu.  <Enter> selects submenus ---> (or empty submenus ----).  Highlighted letters are hotkeys.  Pressing <Y> includes, <N> excludes, <M> modularizes features.  Press <Esc><Esc> to exit, <?> for    (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m  Help, </> for Search.  Legend: [*] built-in  [ ] excluded  <M> module  < > module capable[134X[229G(0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m[225X[229G(0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m[225X[229G(0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mlqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq(0[0;1m[37m[47mk(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m[227G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m (0[0m[30m[47mm(0[0;1m[37m[47mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B[0m[30m[47m (0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mtqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq(0[0m[30m[47mu(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mx(B[0m[30m[47m[225X[229G(0[0m[30m[47mx(B(B[m[39;49m[37m[40m
+[3G(0[0m[30m[47m(0[0;1m[37m[47mm(0[0m[30m[47mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj(B(B[m[39;49m[37m[40m[46;81H(0[0m[30m[47m(B(B[m[39;49m[37m[40m[228G[48;88H(B[0;1m[37m[44m<[33m[44mS[37m[44melect[37m[44m>(B[0m[30m[47m    [30m[47m<(B[0;1m[30m[47m (B[0m[31m[47mE(B[0;1m[30m[47mxit (B[0m[30m[47m>[30m[47m    [30m[47m<(B[0;1m[30m[47m (B[0m[31m[47mH(B[0;1m[30m[47melp (B[0m[30m[47m>[30m[47m    [30m[47m<(B[0;1m[30m[47m (B[0m[31m[47mS(B[0;1m[30m[47mave (B[0m[30m[47m>[30m[47m    [30m[47m<(B[0;1m[30m[47m (B[0m[31m[47mL(B[0;1m[30m[47moad (B[0m[30m[47m>[48;89H(B[m[39;49m[37m[40m[9;82H[H
+
+(B[0;1m[36m[44m[J[H(B[m[39;49m[37m[40m[39;49m[51d[K[51;1H[?1049l[23;0;0t[?1l>
+
+*** End of the configuration.
+*** Execute 'make' to start the build or try 'make help'.
+
