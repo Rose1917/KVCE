@@ -1,6 +1,8 @@
 import os
+import logging
 from utils.extract_all_variables import get_all_configs
 
+logging.basicConfig(level=logging.INFO)
 configs = get_all_configs()
 
 # tranfer the config variable XXX to CONFIG_XXX
@@ -35,5 +37,8 @@ def search_variable(config):
                         
 
 # search the variable
+config_no = 1
 for config in configs:
+    logging.info(f"CONFIG NO:{config_no}")
+    config_no += 1
     search_variable(config)
