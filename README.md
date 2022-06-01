@@ -2,7 +2,7 @@
 
 #### 🔗快速跳转
 
-- 🚀[最新进展(点我老师)](#531)
+- 🚀[最新进展(点我老师)](#601)
 - 🍕[任务描述](#1-任务描述)
 - 🍭[最终产物](#2-最终产物)
 
@@ -199,3 +199,112 @@
 **明天计划**
 
 **第一种方法的尝试明天再深入尝试一下**，看能否有更加结构化的方法，而不是盲目搜索。针对该课题给出较好的解决方案。这种方法简单粗暴，利用`KgConfig`的定位信息也可以在效率上得到不错的提升；但是这种方案的缺点非常明显，即不能对代码进行一些结构化的建模和处理。**明天准备学习`.config`文件中的配置变量是如何被使用起来的**，顺着这个线索看能否有更好的方案。如果真的如老师所讲，作为宏被使用，那么它的处理一定是在编译的预处理阶段，顺着这个线索找下去，看能否有更好的办法...
+
+
+
+#### 6.01
+
+**工作进展**
+
+今天主要是对暴力搜索的方法进行了进一步的探索，尝试在大规模变量上尝试。不过正如昨天写的一样，变量在内核中出现的情况远比我们之前预想的要复杂的多。可能出现在我们预想的`ifdef`中，但是也可能出现在`Makefile`和其他的一些文本文件中。所以今天准备先将退一步，将所有的变量都在内核中搜索一遍，输出出现的文件和对应的行号，以及对应的代码。所以今天的工作主要是：
+
+* 写了一个`extractor.py`的代码。该脚本读入之前的中间文件（配置变量列表），对每一个变量都到内核的所有源代码中进行搜索，如果有匹配，则输出对应的行号和文件名。
+
+* 因为这个过程比较耗时，所以这里只粘贴出来部分的输出：
+
+  ```
+  CONFIG_CC_IS_GCC
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/Makefile :680
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/Makefile :754
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/Makefile :961
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/Makefile :965
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/Makefile :987
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/scripts/Makefile.kcsan :15
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/scripts/Makefile.debug :20
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/scripts/dummy-tools/gcc :52
+      # To set CONFIG_CC_IS_GCC=y
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/lib/Makefile :111
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/lib/mpi/longlong.h :655
+      #if defined(__mips_isa_rev) && __mips_isa_rev >= 6 && defined(CONFIG_CC_IS_GCC)
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/arch/x86/Makefile :14
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/arch/arm/Makefile :35
+      ifeq ($(CONFIG_CC_IS_GCC),y)
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/arch/riscv/include/asm/ftrace.h :19
+      #if defined(CONFIG_CC_IS_GCC) || CONFIG_CLANG_VERSION >= 130000
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/kernel/gcov/Makefile :4
+      obj-$(CONFIG_CC_IS_GCC) += gcc_base.o gcc_4_7.o
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/kernel/bpf/Makefile :4
+      cflags-nogcse-$(CONFIG_X86)$(CONFIG_CC_IS_GCC) := -fno-gcse
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dcn303/Makefile :18
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/calcs/Makefile :35
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dcn302/Makefile :22
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dcn201/Makefile :16
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dcn20/Makefile :19
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dcn21/Makefile :15
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dml/Makefile :35
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dcn30/Makefile :43
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/drivers/gpu/drm/amd/display/dc/dcn31/Makefile :25
+      ifdef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/crypto/Makefile :111
+      aegis128-cflags-$(CONFIG_CC_IS_GCC) += -ffixed-q16 -ffixed-q17 -ffixed-q18 \
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/crypto/aegis128-neon-inner.c :70
+      #ifndef CONFIG_CC_IS_GCC
+  
+      file:/home/march1917/projects/kernel_src/linux-5.17.6/crypto/aegis128-neon-inner.c :122
+      	    !IS_ENABLED(CONFIG_CC_IS_GCC) ||
+  
+  
+  ```
+
+  
+
+* 一些初步的结论：和之前想象的不同，实际上大部分的（这里这个大部分有待考证，是指符合直觉上的大部分）内核配置项，是通过影响`Makefile`进而影响内核的构建的，而不是之前想象的主要通过头文件中的条件宏(#ifdef)这种来影响构建的。
+
+**明天的计划**
+
+因为这个工作非常耗时，所以这部分所有的输出还没有整理出来，我也没有`push`上去。一晚上的时间应该是差不多了。等到明天出了结果以后，再好好看看，看能否有一些新的思路。但是我目前仍然是对这种通过暴力检索的方法所最终产生的结果质量不是特别看好的。
+
+不管怎么样，这个方法总归是比较简单。等到端午节的时候，可以好好看看源码中的`Makefile`，了解一下`make bzImages`和`make modules`命令执行以后，发生了什么！
+
