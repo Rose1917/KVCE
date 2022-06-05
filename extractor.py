@@ -17,9 +17,6 @@ def print_indent(indent, s):
 
 LINUX_FODER = os.path.abspath('../linux-5.17.6/')
 print(LINUX_FODER)
-def search_variable(config):
-    indent = 0
-    print_indent(indent, config)
 
     indent = 4
     for folder, dirs, files in os.walk(LINUX_FODER+'/'):
@@ -36,9 +33,3 @@ def search_variable(config):
                 pass
                         
 
-# search the variable
-config_no = 1
-for config in configs:
-    logging.info(f"CONFIG NO:{config_no}")
-    config_no += 1
-    search_variable(config)
