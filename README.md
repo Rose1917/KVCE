@@ -387,3 +387,21 @@
 ```
 **明日计划**
 对不同的文件类型进行匹配，开始按照文件进行处理。
+
+
+#### **6.07**
+**工作进展**
+今天的主要工作是完成了对文件类型的识别.具体地:
+* 目前 能够主要能够识别的类型如下：
+```python
+    rules_res = ['makefile', 'source', 'header', 'python', 'assembly', 'bash', 'rst', 'text', 'kconfig', 'config', 'others']
+```
+* 此外，我还统计了各种类型的数量：
+```python
+{'makefile': 17197, 'source': 86374, 'header': 7499, 'python': 36, 'assembly': 461, 'bash': 79, 'rst': 642, 'text': 99, 'kconfig': 225, 'config': 388, 'others': 787}
+```
+
+**明日计划**
+从数目最多的`.c`文件开始着手，解析代码的行数和函数。
+
+
