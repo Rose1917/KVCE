@@ -335,3 +335,55 @@
 **明天的计划**
 
 正如我上面所写，下一步准备对搜索的结果转化成为结构化的`json`数据，方便后续的整理，例如统计文件的类型、源代码的解析等等。
+
+#### **6.06**
+**工作进展**
+今天主要工作体现在`Coding`,今天完成了从之前的文本到`json`的转换。这个转换是非常有意义的，因为无结构的数据很难处理。后面我们的工作就在`python`下完成就好。具体地：
+* 完成了`process.py`中的`block_to_json`函数，这个函数的作用是把`res`文件转化为`json`格式。
+* 具体的`json`格式请参阅`data.json`数据文件，大概是这样：
+```
+    the transfered json pattern
+    {
+        "config_name:" "XXXX"
+        "search_res": [
+            {
+                "file_path": "./linux-5.17.6/arch/XXXX",
+                "hits":
+                    [
+                        {
+                            "line_no" : XXX,
+                            "content" : XXX
+                        },
+                        {
+                            "line_no" : XXX,
+                            "content" : XXX
+                        }
+
+
+                    ]
+
+            },
+            {
+                "file_path": "./linux-5.17.6/...",
+                "hits": 
+                    [
+                        {
+                            "line_no" : XXX,
+                            "content" : XXXX,
+
+                        }
+
+                        {
+                            "line_no" : XXX,
+                            "content" : XXXX,
+
+                        }
+
+                    ]
+
+            }
+        ]
+'''
+```
+**明日计划**
+对不同的文件类型进行匹配，开始按照文件进行处理。
