@@ -2,6 +2,8 @@
 open the grep file res.txt and process it
 '''
 import json
+import os
+import re
 
 
 # get the blocks of the search file
@@ -131,7 +133,41 @@ def block_to_json(block):
 
     cur_config["search_res"] = file_blocks_json
     return cur_config
-        
+
+
+# from the json file, get all the extension
+#     if it ends with .XXX, then the extension is XXX
+#     if it not, it will return the filename
+def get_all_extension(config_list):
+    # the rule string and its corresponding res
+    rules_str = ['[mM]akefile', '[\w-]+.c', '[\w-]+.h', '\w*_defconfig', '[\w-]+.md', '[\w-]+.py', '[\w-]+.S']
+    rules_res = ['makefile', 'source', 'header', 'deconfig', 'markdown', 'python', 'assembly']
+
+    # match hits
+    rules_hits = [0] * len(rules_str)
+
+    # compile the re string
+    rules_re = map(re.compile, rules_str)
+    rules = dict(zip(rules_re, rules_res))
+
+    unmathed_file = []
+    for conf in config_list:
+        search_res = conf["search_res"]
+        for file_block in search_res:
+            path = file_block['path']
+            file_name = os.path.basename(path)
+
+            for i, (rule, res) in enumerate(rules.items()):
+                if rule.match(file_name):
+                    rules_hits[i] += 1
+                    break
+            else:
+                unmathed_file.append(file_name)
+
+                    
+    print(unmathed_file)
+            # print(file_name)
+
 
 if __name__ == '__main__':
     # blocks = get_blocks("./res.txt")
@@ -143,6 +179,7 @@ if __name__ == '__main__':
     #     json.dump(res, f, indent=2)
     with open('data.json', 'r') as f:
         data = json.load(f)
-    print(data)
-    s = json.dumps(data, indent=2)
-    print(s)
+    get_all_extension(data)
+    # print(data)
+    # s = json.dumps(data, indent=2)
+    # print(s)
