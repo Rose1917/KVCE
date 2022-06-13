@@ -500,3 +500,44 @@ printf("Hello world")
 **明日计划**
 
 进一步完善自己的脚本，完成对`.c`文件的分析。
+
+#### 6.11
+
+**今日工作**
+
+今天工作有了非常好的进展。之前其实一直没有找到一个很好的可以满足我的要求的预编译器——`cpp`本身需要处理好`include`文件，否则会直接报错。而昨天的工作汇报中所提到的`include`虽然能够对`include`的缺失进行忽略，但是这是一个非常非常小众的库，其实我自己也用的不太放心。今天尝试了`pcpp`，发现效果很好。
+
+看一下下面的例子。
+
+对于源文件`./linux-5.17.6/arch/arm/kernel/stacktrace.c`为例，通过之前的搜索我们检索到了该源文件和`CONFIG_CC_IS_CLANG`有关。我们分别打开和关闭该宏，得到如下的结果。效果非常不错！
+
+```diff
+51c51
+< #ifdef CONFIG_CC_IS_CLANG
+---
+> 
+59,68c59
+< #else
+< 	/* check current frame pointer is within bounds */
+< 	if (fp < low + 12 || fp > high - 4)
+< 		return -EINVAL;
+< 
+< 	/* restore the registers from the stack frame */
+< 	frame->fp = *(unsigned long *)(fp - 12);
+< 	frame->sp = *(unsigned long *)(fp - 8);
+< 	frame->pc = *(unsigned long *)(fp - 4);
+< #endif
+---
+> #line 69
+
+```
+
+**今日问题**
+
+上面的方法现在来看效果很不错，但是现在有一个问题，对于某一个变量，我们已经可以精确地定位到了如上的代码段了。那么我们需要保存的是什么信息呢？是这部分的代码？还是最开始我们定义的行号？
+
+希望老师看到以后可以给点建议和提示。
+
+**明日任务**
+
+大规模地应用，看是否具有鲁棒性。
