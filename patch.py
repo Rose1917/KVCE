@@ -3,6 +3,7 @@ import wget
 import time
 import json
 import re
+from process import macro_diff_same
 
 # the remote configs
 KERNEL_BASE_URL = 'https://mirrors.edge.kernel.org/pub/linux/kernel/'
@@ -177,8 +178,12 @@ print(SPLIT_LINE)
 '''
 
 # load the json file
-# init_patch is the patch of current version
+# base_patch is the patch of current version
 base_patch = concat_version(MAIN_VERSION, SUB_VERSION, PATCH_VERSION, with_ext=False)
+
+# prepare the last_release version
+os.system('rm -rf ./last_release && cp -r ./linux-5.17.6 ./last_release')
+
 # for i in range(1, 2):
 for i in range(1, patch_count+1):
     patch_file = concat_version(cur_main, cur_sub, cur_patch+i, with_ext=False)
@@ -187,6 +192,7 @@ for i in range(1, patch_count+1):
 
     # make patch
     os.system('cd ./linux-5.17.6 && patch  -p1  <../tmp/'+patch_file + ' >../reports/'+patch_file+'.log')
+
 
     # make the patch file list
     with open('./reports/'+patch_file+'.log', 'r') as f:
@@ -206,6 +212,7 @@ for i in range(1, patch_count+1):
         with open('./config_vars/'+patch_file+'.config_list', 'w') as f_config:
             json.dump(f_config_l, f_config, indent=2)
 
+
     # print(cur_config_set)
     # _ = input()
     res = {}
@@ -216,6 +223,10 @@ for i in range(1, patch_count+1):
     # for each patch_file
     for s_line in patch_file_list:
         # print('./linux-5.17.6/'+s_line)
+        if not os.system('diff ./linux-5.17.6/'+s_line + ' ' + './last_release/'+s_line + ' >/dev/null'):
+            # nothing changed since last version
+            continue
+
         single_file_res = {}
         single_file_res['path'] = s_line
         try:
@@ -238,24 +249,29 @@ for i in range(1, patch_count+1):
         concerned_vars = concerned_vars | tmp_set
         # print(search_res)
         # this file do have something to do with configure variables
+        tmp_set_cpy = tmp_set.copy()
         if len(tmp_set) > 0:
+            # make sure the macro_diff function get different result
+            tmp_set = {x for x in tmp_set if not macro_diff_same('./linux-5.17.6/'+s_line, './last_release/'+s_line, x)}
+
             single_file_res['concerned_vars'] = list(tmp_set.copy())
             res['file_res'].append(single_file_res.copy())
         else:
+            # the current file does not contain config vars
             continue
 
     res['global_concerned_vars'] = list(concerned_vars)
     with open('./patch_res/'+patch_file+'.json', 'w') as patch_f:
         json.dump(res, patch_f, indent=2)
 
+    # copy to last_release
+
+    # prepare the last_release version
+    os.system('rm -rf ./last_release && cp -r ./linux-5.17.6 ./last_release')
+
     # patch back
     os.system('cd ./linux-5.17.6 && patch  -p1   -R >/dev/null <../tmp/'+patch_file)
     os.system('cd ./linux-5.17.6 && patch  -p1   >/dev/null <../tmp/'+base_patch)
-
-
-
-
-
 
 # with open('data.json') as json_file:
 #     data = json.load(json_file)
